@@ -17,7 +17,7 @@ def num_impares
     end
     return y
 end
-puts num_impares 
+print num_impares 
 
 x = [1,5,10,7,-2]
 
