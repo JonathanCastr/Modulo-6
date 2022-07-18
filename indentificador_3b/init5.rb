@@ -74,7 +74,6 @@ end
 def menu03()
     require 'csv'
     content = CSV.read("catalogo_producto_hash.txt") # lee el archivo
-    print content
     for a in content do
         producto_hash = {
             "clave" => clave(a[0],a[4]),
@@ -83,10 +82,9 @@ def menu03()
             "precio" => a[3],
             "categoria" => a[4]
         }
-        $lista_productos.push(producto_hash) 
-        
+        $lista2_productos.push(producto_hash) 
     end
-
+    print $lista2_productos
 end
 
 def menu00
@@ -101,6 +99,7 @@ end
 
 menu = 10
 $lista_productos = []
+$lista2_productos = []
 loop do
   break if menu == 0
   menu = mostrarMenu()
