@@ -1,18 +1,16 @@
-texto =  ["R","R","G","G","B","B","Y","Y","K","K"]
-for a in 0..19 do
-    print *texto
-    texto.rotate! 1
-    puts
-end
-texto1 =  ["+","+","*","~","~","*","+","+","*"]
-for a in 0..19 do
-    print *texto1
-    texto1.rotate! 1
-    puts
-end
-texto2 =  ["=","|","/","|","/","|","=","|","/","|"]
-for a in 0..19 do
-    print *texto2
-    texto2.rotate! 1
-    puts
-end
+require 'rest-client'
+require 'json'
+url ='https://apis.digital.gob.cl/dpa/regiones?limit=10'
+response = RestClient.get url
+result = JSON.parse(response.to_str)
+
+    result.each do |llave,clave|
+        puts clave
+        if llave == "nombre"
+            puts "El nombre de la región es #{clave}"
+        end
+    end
+
+
+#name = result['nombre']
+#puts "El nombre de la comuna es #{name}"
