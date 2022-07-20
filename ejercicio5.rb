@@ -1,40 +1,8 @@
-numero =
-{
-    'i' =>1,
-    'ii'=>2,
-    'iii'=>3,
-    'iv'=>4,
-    'v'=>5,
-    'vi'=>6,
-    'vii'=>7,
-    'viii'=>8,
-    'ix'=>9,
-    'x'=>10,
-}
-#numero.each do |llave,valor| puts "#{valor}"
-#end 
-        print "escribe un numero del 1 al 10 en decimal o romano"
-        puts
-        respuesta = gets.chomp
-        if respuesta.to_i != respuesta.to_s && numero.has_key?(respuesta.downcase) #como en tu caso es en minusculas .downcase es el modulo
-            puts "el numero romano en decimal seria #{numero [respuesta.downcase]}" # mismo aqui
-        elsif respuesta.to_i > 0 && respuesta.to_i <=10
-            decimal = numero.invert
-            puts "el numero decimal en numero romano seria #{decimal [respuesta.to_i]}"
-        else
- #           puts numero.default = "no encontrado" #no es necesario poner el numero.default ahora si lo quieres poner debe ser asi
-            puts "#{numero.default}: No encontrado"
-        end
-            
-    
-
-   
-
-
-        
-        
-
-    
-
-
-
+numero = {"I"=>1,"II"=>2,"III"=>3,"IV"=>4,"V"=>5,"VI"=>6,"VII"=>7,"VIII"=>8,"IX"=>9,"X"=>10}
+puts "Ingrese un numero del 1 al 10 para pasarlo a romano o del I al X para pasarlo a decimal"
+valor  = gets.chomp
+if valor.to_i != valor.to_s && numero.has_key?(valor.upcase)
+    puts "Su numero romano en decimal es #{numero[valor.upcase]}"
+elsif valor.to_i > 0 && valor.to_i <= 5
+    nueva_variable = numero.invert
+    puts "Su numero decimal en romano es #{nueva_variable[valor.to_i]}"
