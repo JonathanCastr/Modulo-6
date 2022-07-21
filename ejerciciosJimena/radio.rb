@@ -6,11 +6,11 @@ class Radio
     end
 
     def subirvolumen()
-        puts @volumen + "1..30"
+        puts @volumen + (1..30)
     end
 
-    def cambiarfrecuencia
-        puts @frecuencia + "AM || FM"
+    def cambiarfrecuencia()
+        puts @frecuencia + (AM & FM)
     end
 
     
