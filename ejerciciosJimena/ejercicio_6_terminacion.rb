@@ -16,7 +16,7 @@ comuna = RestClient.get url2
 comunas = JSON.parse(comuna.to_str)
 for a in comunas do
     com_ord = a['nombre']
-    puts "20 comunas ordanadas descendentemente #{com_ord}"   
+    puts "20 comunas ordenadas descendentemente #{com_ord}"   
 end
 
 url3 ='https://apis.digital.gob.cl/dpa/comunas/05109?geolocation=false'
