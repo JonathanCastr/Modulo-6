@@ -1,5 +1,5 @@
 class Radio
-    
+    attr_accessor :volume, :frecuencia
     def radio.volume(“+”)
     end
 
@@ -9,7 +9,7 @@ class Radio
     def radio.frecuencia(“AM”)
     end
 
-    def radio.frecuencia(“FM”)
+    def radiofrecuencia(“FM”)
     end
     
 end
