@@ -26,13 +26,5 @@ comuna_habito = JSON.parse(comunageo.to_str)
     puts "Los datos de la comuna donde vivo son #{micomuna}"   
 
 
-#la segunda parte aun no logro ordenarlas descendentemente pero mañana lo vemos
-
-# for b in comunas do
-#     comu = b['nombre']
-#     puts "20 comunas ordenadas descedentemente #{comu}"  
-# end
-
-puts "Los datos de comuna donde vivo son #{comuna_habito}"
 
     
